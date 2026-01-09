@@ -1,0 +1,396 @@
+openapi: 3.0.3
+info:
+  title: AcmePay API (Portfolio Sample)
+  version: "1.0.0"
+  description: >
+    This is a fictional, non-functional API designed for portfolio documentation samples.
+    It mirrors real-world API patterns (auth, errors, webhooks, idempotency) without
+    disclosing any confidential information.
+
+servers:
+  - url: https://api.sandbox.acmepay.example/v1
+    description: Sandbox
+  - url: https://api.acmepay.example/v1
+    description: Production
+
+tags:
+  - name: Payments
+    description: Payment creation and retrieval
+  - name: Refunds
+    description: Refund operations
+  - name: Webhooks
+    description: Webhook endpoint management
+
+security:
+  - bearerAuth: []
+
+paths:
+  /payments:
+    post:
+      tags: [Payments]
+      summary: Create a payment
+      operationId: createPayment
+      parameters:
+        - in: header
+          name: Idempotency-Key
+          required: false
+          schema:
+            type: string
+          description: Unique key to ensure request idempotency.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreatePaymentRequest"
+            examples:
+              example:
+                value:
+                  amount: 1999
+                  currency: USD
+                  payment_method:
+                    type: card
+                    card:
+                      number: "4242424242424242"
+                      exp_month: 12
+                      exp_year: 2030
+                      cvc: "123"
+                  metadata:
+                    order_id: ORDER-10001
+      responses:
+        "201":
+          description: Payment created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Payment"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+        "500":
+          $ref: "#/components/responses/ServerError"
+
+  /payments/{payment_id}:
+    get:
+      tags: [Payments]
+      summary: Retrieve a payment
+      operationId: getPayment
+      parameters:
+        - in: path
+          name: payment_id
+          required: true
+          schema:
+            type: string
+          description: Payment ID (e.g., pay_...)
+      responses:
+        "200":
+          description: Payment
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Payment"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+        "500":
+          $ref: "#/components/responses/ServerError"
+
+  /refunds:
+    post:
+      tags: [Refunds]
+      summary: Create a refund
+      operationId: createRefund
+      parameters:
+        - in: header
+          name: Idempotency-Key
+          required: false
+          schema:
+            type: string
+          description: Unique key to ensure request idempotency.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateRefundRequest"
+            examples:
+              example:
+                value:
+                  payment_id: pay_example_001
+                  amount: 2000
+                  reason: requested_by_customer
+      responses:
+        "201":
+          description: Refund created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Refund"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+        "500":
+          $ref: "#/components/responses/ServerError"
+
+  /webhook-endpoints:
+    post:
+      tags: [Webhooks]
+      summary: Register a webhook endpoint
+      operationId: createWebhookEndpoint
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateWebhookEndpointRequest"
+            examples:
+              example:
+                value:
+                  url: https://example.com/webhooks/acmepay
+                  events:
+                    - payment.succeeded
+                    - refund.created
+      responses:
+        "201":
+          description: Webhook endpoint registered
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WebhookEndpoint"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+        "500":
+          $ref: "#/components/responses/ServerError"
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Use your API key as a Bearer token.
+
+  responses:
+    BadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    NotFound:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    RateLimited:
+      description: Too Many Requests
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    ServerError:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+
+  schemas:
+    CreatePaymentRequest:
+      type: object
+      required: [amount, currency, payment_method]
+      properties:
+        amount:
+          type: integer
+          description: Amount in the smallest currency unit (e.g., cents for USD).
+          example: 1999
+          minimum: 1
+        currency:
+          type: string
+          description: 3-letter ISO currency code.
+          example: USD
+          minLength: 3
+          maxLength: 3
+        payment_method:
+          type: object
+          required: [type, card]
+          properties:
+            type:
+              type: string
+              example: card
+            card:
+              type: object
+              required: [number, exp_month, exp_year, cvc]
+              properties:
+                number:
+                  type: string
+                  example: "4242424242424242"
+                exp_month:
+                  type: integer
+                  example: 12
+                  minimum: 1
+                  maximum: 12
+                exp_year:
+                  type: integer
+                  example: 2030
+                cvc:
+                  type: string
+                  example: "123"
+        metadata:
+          type: object
+          description: Optional key-value metadata.
+          additionalProperties:
+            type: string
+
+    Payment:
+      type: object
+      required: [id, object, status, amount, currency, created_at]
+      properties:
+        id:
+          type: string
+          example: pay_01J9Z8K6Y2G7K3T0XW7QJ2B3V0
+        object:
+          type: string
+          example: payment
+        status:
+          type: string
+          description: Payment status.
+          example: succeeded
+          enum: [requires_action, processing, succeeded, failed]
+        amount:
+          type: integer
+          example: 1999
+        currency:
+          type: string
+          example: USD
+        created_at:
+          type: string
+          format: date-time
+          example: "2026-01-09T12:00:00Z"
+        metadata:
+          type: object
+          additionalProperties:
+            type: string
+
+    CreateRefundRequest:
+      type: object
+      required: [payment_id]
+      properties:
+        payment_id:
+          type: string
+          example: pay_example_001
+        amount:
+          type: integer
+          description: Refund amount in smallest currency unit. If omitted, refund full amount.
+          example: 2000
+          minimum: 1
+        reason:
+          type: string
+          example: requested_by_customer
+
+    Refund:
+      type: object
+      required: [id, object, status, payment_id, amount, created_at]
+      properties:
+        id:
+          type: string
+          example: rfnd_example_001
+        object:
+          type: string
+          example: refund
+        status:
+          type: string
+          example: succeeded
+          enum: [pending, succeeded, failed]
+        payment_id:
+          type: string
+          example: pay_example_001
+        amount:
+          type: integer
+          example: 2000
+        created_at:
+          type: string
+          format: date-time
+          example: "2026-01-09T12:10:00Z"
+        reason:
+          type: string
+          example: requested_by_customer
+
+    CreateWebhookEndpointRequest:
+      type: object
+      required: [url, events]
+      properties:
+        url:
+          type: string
+          format: uri
+          example: https://example.com/webhooks/acmepay
+        events:
+          type: array
+          items:
+            type: string
+          example: ["payment.succeeded", "refund.created"]
+
+    WebhookEndpoint:
+      type: object
+      required: [id, url, events]
+      properties:
+        id:
+          type: string
+          example: we_01J9Z9EXAMPLE123
+        url:
+          type: string
+          format: uri
+          example: https://example.com/webhooks/acmepay
+        events:
+          type: array
+          items:
+            type: string
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: object
+          required: [type, code, message, request_id]
+          properties:
+            type:
+              type: string
+              example: invalid_request_error
+            code:
+              type: string
+              example: invalid_request
+            message:
+              type: string
+              example: amount must be greater than 0
+            param:
+              type: string
+              nullable: true
+              example: amount
+            request_id:
+              type: string
+              example: req_01J9Z8Q0WJ9R4F7N2Y0W9QK6H9
+            docs_url:
+              type: string
+              example: https://docs.acmepay.example/errors#invalid_request

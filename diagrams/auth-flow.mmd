@@ -1,0 +1,6 @@
+sequenceDiagram
+  participant Client
+  participant API
+
+  Client->>API: POST /v1/payments (Authorization: Bearer ...)
+  API-->>Client: 201 Payment (or Error)

@@ -1,0 +1,46 @@
+{
+  "info": {
+    "name": "AcmePay API (Portfolio Sample)",
+    "_postman_id": "b9e2a1b3-1f2a-4c3d-9e8f-1234567890ab",
+    "description": "Fictional, non-functional API collection for portfolio documentation.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Payment",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{api_key}}" },
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Idempotency-Key", "value": "{{$guid}}" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/payments",
+          "host": ["{{base_url}}"],
+          "path": ["payments"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": 1999,\n  \"currency\": \"USD\",\n  \"payment_method\": {\n    \"type\": \"card\",\n    \"card\": {\n      \"number\": \"4242424242424242\",\n      \"exp_month\": 12,\n      \"exp_year\": 2030,\n      \"cvc\": \"123\"\n    }\n  },\n  \"metadata\": {\n    \"order_id\": \"ORDER-10001\"\n  }\n}"
+        }
+      }
+    },
+    {
+      "name": "Get Payment",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{api_key}}" }],
+        "url": {
+          "raw": "{{base_url}}/payments/pay_example_001",
+          "host": ["{{base_url}}"],
+          "path": ["payments", "pay_example_001"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "base_url", "value": "https://api.sandbox.acmepay.example/v1" },
+    { "key": "api_key", "value": "sk_sandbox_example_123" }
+  ]
+}
