@@ -1,4 +1,278 @@
-# AcmePay Developer Documentation (Portfolio Sample)
+# AcmePay Developer Documentation
+
+## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+
+This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
+- Structured onboarding (Quickstart)
+- Production-grade API patterns (errors, rate limits, idempotency)
+- Webhooks + signature verification guidance
+- OpenAPI spec + example requests
+- Git-based workflow (branches + PRs)
+
+## Documentation map
+
+- Start here: [Docs Home](docs/index.md)
+- Tutorial: [Quickstart](docs/tutorials/quickstart.md)
+- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
+- OpenAPI: [openapi.yaml](openapi/openapi.yaml)
 
 This repository is a **portfolio project** that demonstrates how I write and structure developer documentation using a **docs-as-code** workflow.
 
