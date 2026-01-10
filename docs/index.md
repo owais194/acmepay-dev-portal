@@ -2,6 +2,13 @@
 
 Welcome to the AcmePay developer documentation. This sample is designed to show professional documentation patterns for a payments-style REST API.
 
+## Recommended reading order
+
+1. [Quickstart](tutorials/quickstart.md)
+2. [Authentication](concepts/authentication.md)
+3. [Errors](concepts/errors.md)
+4. [Webhooks](concepts/webhooks.md)
+5. [Endpoints](reference/endpoints.md)
 ## Tutorials
 
 - [Quickstart](tutorials/quickstart.md)
