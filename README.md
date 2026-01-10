@@ -1,55 +1,74 @@
-# AcmePay Developer Documentation
+# AcmePay Developer Documentation (Portfolio Sample)
 
-## Why this project exists (portfolio)
+This repository is a **portfolio project** demonstrating how I write and structure **developer documentation** using a **docs-as-code** workflow.
 
-This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
-- Structured onboarding (Quickstart)
-- Production-grade API patterns (errors, rate limits, idempotency)
-- Webhooks + signature verification guidance
-- OpenAPI spec + example requests
-- Git-based workflow (branches + PRs)
+> **Confidentiality note:** AcmePay is a fictional company and the API is non-functional. This doc set mirrors real-world API patterns (auth, errors, webhooks, idempotency) without using any client or proprietary information.
 
-## Documentation map
+## Highlights (what this demonstrates)
 
-- Start here: [Docs Home](docs/index.md)
+- A clear onboarding path via a **Quickstart** (time-to-first-call focus)
+- Production-grade API concepts: **errors**, **rate limits**, **idempotency**
+- Integration guidance for **webhooks** including **signature verification**
+- Reference-ready materials: **endpoint summaries**, **schemas**, and a minimal **OpenAPI 3.0 spec**
+- Git-based workflow signals: Markdown, repo structure, contribution docs, PR template
+
+## Audience
+
+This documentation is written for:
+- Developers integrating a payments API
+- QA engineers testing payment flows in sandbox
+- Solutions/support engineers troubleshooting integration issues
+
+## Scope (v1)
+
+Covered in this sample:
+- Payments: create + retrieve
+- Refunds: create
+- Webhooks: endpoint registration + signature verification
+- Core API concepts: authentication, errors, rate limits, idempotency
+
+## Documentation map (start here)
+
+- Home: [Docs index](docs/index.md)
 - Tutorial: [Quickstart](docs/tutorials/quickstart.md)
-- Concepts: [Auth](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
-- How-to: [Create payment](docs/how-to/create-payment.md) · [Refund payment](docs/how-to/refund-payment.md) · [Verify webhook signature](docs/how-to/verify-webhook-signature.md)
+- Concepts: [Authentication](docs/concepts/authentication.md) · [Errors](docs/concepts/errors.md) · [Rate limits](docs/concepts/rate-limits.md) · [Idempotency](docs/concepts/idempotency.md) · [Webhooks](docs/concepts/webhooks.md)
+- How-to: [Create a payment](docs/how-to/create-payment.md) · [Refund a payment](docs/how-to/refund-payment.md) · [Verify a webhook signature](docs/how-to/verify-webhook-signature.md)
 - Reference: [Endpoints](docs/reference/endpoints.md) · [Schemas](docs/reference/schemas.md)
-- OpenAPI: [openapi.yaml](openapi/openapi.yaml)## Why this project exists (portfolio)
+- OpenAPI: [openapi/openapi.yaml](openapi/openapi.yaml)
+- Postman: [postman/collection.json](postman/collection.json)
 
-This fictional Payments API doc set demonstrates how I approach developer documentation in a corporate docs-as-code environment:
-- Structured onboarding (Quickstart)
-- Production-grade API patterns (errors, rate limits, idempotency)
-- Webhooks + signature verification guidance
-- OpenAPI spec + example requests
-- Git-based workflow (branches + PRs)
+## How to review this documentation (recommended)
 
-This repository is a **portfolio project** that demonstrates how I write and structure developer documentation using a **docs-as-code** workflow.
+1. Start with the onboarding flow: [Quickstart](docs/tutorials/quickstart.md)
+2. Review integration-critical concepts:
+   - [Authentication](docs/concepts/authentication.md)
+   - [Errors](docs/concepts/errors.md)
+   - [Idempotency](docs/concepts/idempotency.md)
+   - [Webhooks](docs/concepts/webhooks.md)
+3. Skim the API coverage:
+   - [Endpoints reference](docs/reference/endpoints.md)
+   - [Schemas](docs/reference/schemas.md)
 
-> **Confidentiality note:** AcmePay is a fictional company and the API is non-functional. This documentation is intentionally designed to mirror real-world patterns (auth, errors, webhooks, idempotency) without disclosing any client or proprietary information.
+## Validate the OpenAPI spec (optional)
 
-## What this repo demonstrates
+- File: [openapi/openapi.yaml](openapi/openapi.yaml)
+- Validate in Swagger Editor: https://editor.swagger.io/
 
-- Clear developer onboarding via a **Quickstart**
-- Realistic API concepts: **Authentication**, **Errors**, **Rate limits**, **Idempotency**
-- Production-grade integration patterns: **Webhooks + signature verification**
-- Reference material and schemas
-- Docs-as-code practices: Markdown structure, contribution docs, PR template
-- A minimal **OpenAPI 3.0** spec and Postman collection
+## Documentation structure (Diátaxis-style)
 
-## Start here
+- Tutorials (learning): `/docs/tutorials`
+- How-to guides (tasks): `/docs/how-to`
+- Concepts (understanding): `/docs/concepts`
+- Reference (lookup): `/docs/reference`
 
-- 📌 [Documentation Home](docs/index.md)
-- 🚀 [Quickstart](docs/tutorials/quickstart.md)
-- 🔐 [Authentication](docs/concepts/authentication.md)
-- ❗ [Errors](docs/concepts/errors.md)
-- 🔁 [Idempotency](docs/concepts/idempotency.md)
-- 🪝 [Webhooks](docs/concepts/webhooks.md)
-- 📚 [Endpoints Reference](docs/reference/endpoints.md)
-- 🧩 [Schemas](docs/reference/schemas.md)
-- 🧾 [OpenAPI spec](openapi/openapi.yaml)
-- 🧪 [Postman collection](postman/collection.json)
+## Docs-as-code workflow
+
+- Documentation lives in Markdown under `/docs`
+- Changes are intended to go through branches + pull requests
+- See:
+  - [CONTRIBUTING.md](CONTRIBUTING.md)
+  - [STYLE-GUIDE.md](STYLE-GUIDE.md)
+  - PR template under `.github/`
 
 ## API overview (fictional)
 
@@ -57,7 +76,7 @@ This repository is a **portfolio project** that demonstrates how I write and str
 - Sandbox: `https://api.sandbox.acmepay.example/v1`
 - Production: `https://api.acmepay.example/v1`
 
-**Auth**
+**Authentication**
 - `Authorization: Bearer <API_KEY>`
 
 ## License
